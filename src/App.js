@@ -1,9 +1,16 @@
 import React from 'react';
-import {Form,Col,Button} from "react-bootstrap";
+import {Form,Col,Button,Navbar} from "react-bootstrap";
 
 
 function App() {
-  return (
+  return ( 
+    <div id="parent">
+    <Navbar bg="mycolor" variant="dark">
+        <Navbar.Brand href="#home">
+            MyWebsite.com
+        </Navbar.Brand>
+    </Navbar>
+    
     <Form>
     <h1>PERSONAL INFO</h1>
     <Form.Row>
@@ -20,7 +27,7 @@ function App() {
     <Form.Row>
     <Form.Group as={Col} controlId="formGridEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control type="email" placeholder="example@email.com" />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridPassword">
@@ -63,7 +70,11 @@ function App() {
     <Button variant="secondary" size="lg" block>
     Sign Up
     </Button>
-</Form>
+    </Form>
+        <footer>
+            <p> &#169; 2021</p>
+        </footer>
+    </div>
   );
 }
 
